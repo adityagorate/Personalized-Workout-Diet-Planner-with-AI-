@@ -51,7 +51,7 @@ AI-Fitness-Planner/
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/adityagorate/.git
+git clone https://github.com/adityagorate/Personalized-Workout-Diet-Planner-with-AI- 
 
 cd ai-fitness-planner
 
