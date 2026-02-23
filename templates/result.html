@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Fitness Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+
+        .dashboard {
+            margin-top: 50px;
+        }
+
+        .card-custom {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .stat-box {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-back {
+            background: #ff416c;
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            border: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background: rgba(255,255,255,0.1);
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container dashboard">
+
+    <div class="card-custom">
+
+        <h2 class="text-center mb-4">🔥 Your AI Fitness Report</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-6">
+                <div class="stat-box">
+                    <h4>BMI</h4>
+                    <h3>{{ bmi }}</h3>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="stat-box">
+                    <h4>Target Calories</h4>
+                    <h3>{{ calories }} kcal</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <h4>🥗 Recommended Meals</h4>
+        <ul>
+            {% for index, row in meals.iterrows() %}
+            <li>{{ row['name'] }} — Protein: {{ row['protein'] }}g</li>
+            {% endfor %}
+        </ul>
+
+        <img src="{{ url_for('static', filename='chart.png') }}" class="img-fluid rounded mt-3">
+
+        <hr>
+
+        <h4>🏋 Weekly Workout Plan</h4>
+        <ul>
+            {% for day, plan in workout.items() %}
+            <li><strong>{{ day }}</strong> — {{ plan }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="btn btn-back w-100 mt-3">Back to Planner</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
