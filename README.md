@@ -107,4 +107,10 @@ Step 5: Workout Plan
 
 ## Demo Screanshorts
 
+<img width="597" height="558" alt="Image" src="https://github.com/user-attachments/assets/0acff8aa-f990-4869-bedf-f9288baee756" />
+
+<img width="891" height="605" alt="Image" src="https://github.com/user-attachments/assets/e1bc2108-8adf-4237-8846-933a412ddd87" />
+
+<img width="897" height="307" alt="Image" src="https://github.com/user-attachments/assets/73c2bce9-a7ce-44a0-8f3e-52ace297cdeb" />
+
 
